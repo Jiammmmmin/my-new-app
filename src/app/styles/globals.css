@@ -1,0 +1,313 @@
+/* Reset default browser styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #ffffff; /* Bright white text */
+  background-color: #1c1c1c; /* Slightly lighter dark background */
+  height: 100%;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+/* Main container */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Header styles */
+header {
+  margin-bottom: 20px;
+}
+
+header h1 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+header p {
+  font-size: 1rem;
+  color: #a0a0a0; /* Secondary text color */
+}
+
+/* Section headings */
+section h2 {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 12px;
+  color: #e6e6e6; /* Slightly lighter text for headings */
+}
+
+/* Sharing Configuration */
+.sharing-config {
+  padding: 20px;
+  border: 1px solid #333;
+  border-radius: 8px;
+  background-color: #2a2a2a;
+  margin-bottom: 20px;
+}
+
+.sharing-config div {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.sharing-config label {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 1rem;
+  color: #dcdcdc;
+}
+
+.sharing-config input[type="radio"] {
+  accent-color: #007bff; /* Blue color for selected radio button */
+  width: 20px;
+  height: 20px;
+}
+
+/* User Access List */
+.user-access .user {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+  border: 1px solid #444;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  background-color: #1d1d1d;
+  transition: background-color 0.3s;
+}
+
+.user-access .user:hover {
+  background-color: #272727; /* Slight hover effect */
+}
+
+.user-access .user span {
+  font-size: 1rem;
+  color: #f0f0f0;
+}
+
+.user-access .user select {
+  padding: 6px 10px;
+  font-size: 0.9rem;
+  border: 1px solid #555;
+  border-radius: 4px;
+  background-color: #2b2b2b;
+  color: #fff;
+}
+
+.user-access .user select:focus {
+  outline: 2px solid #007bff; /* Focus ring */
+}
+
+/* Share Access Button */
+button {
+  padding: 12px 25px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+button:hover {
+  background-color: #0056b3; /* Darker blue for hover */
+}
+
+button:active {
+  background-color: #003d80; /* Even darker for active state */
+  transform: scale(0.98); /* Slight click animation */
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  .sharing-config div,
+  .user-access .user {
+      flex-direction: column;
+      align-items: flex-start;
+  }
+
+  .user-access .user select {
+      margin-top: 10px;
+      width: 100%;
+  }
+}
+/* Default Sharing Configuration */
+.sharing-options {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.sharing-option {
+  padding: 15px;
+  border: 1px solid #333;
+  border-radius: 8px;
+  background-color: #2a2a2a;
+  transition: background-color 0.3s ease;
+}
+
+.sharing-option:hover {
+  background-color: #272727;
+}
+
+.sharing-option label {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  font-size: 1rem;
+  color: #dcdcdc;
+}
+
+.sharing-option input[type="radio"] {
+  accent-color: #007bff;
+  width: 20px;
+  height: 20px;
+  margin-top: 5px; /* Align radio button with text */
+}
+
+.option-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.option-content img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.option-content div {
+  display: flex;
+  flex-direction: column;
+}
+
+.option-content strong {
+  font-size: 1rem;
+  color: #ffffff;
+}
+
+.option-description {
+  font-size: 0.85rem;
+  color: #a0a0a0;
+}
+
+
+/* User Access Section */
+.user-access {
+  margin-top: 20px;
+}
+
+.user-access h2 {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #e6e6e6;
+}
+
+.search-and-share {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.search-input {
+  flex: 1;
+  padding: 10px 15px;
+  font-size: 0.9rem;
+  border: 1px solid #555;
+  border-radius: 6px;
+  background-color: #1d1d1d;
+  color: #fff;
+}
+
+.search-input::placeholder {
+  color: #a0a0a0;
+}
+
+.search-input:focus {
+  outline: 2px solid #007bff;
+}
+
+.share-button {
+  padding: 10px 20px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.share-button:hover {
+  background-color: #0056b3;
+}
+
+.user-list .user {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+  border: 1px solid #444;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  background-color: #1d1d1d;
+  transition: background-color 0.3s;
+}
+
+.user-list .user:hover {
+  background-color: #272727;
+}
+
+.user-list .user span {
+  font-size: 1rem;
+  color: #f0f0f0;
+  flex: 1;
+}
+
+.user-list .user small {
+  display: block;
+  font-size: 0.8rem;
+  color: #a0a0a0;
+}
+
+.user-list .user select {
+  padding: 6px 10px;
+  font-size: 0.9rem;
+  border: 1px solid #555;
+  border-radius: 6px;
+  background-color: #2b2b2b;
+  color: #fff;
+}
+
+.user-list .user select:focus {
+  outline: 2px solid #007bff;
+}
+
+

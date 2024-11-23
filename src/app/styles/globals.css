@@ -1,4 +1,5 @@
 /* Reset default browser styles */
+/* Reset default browser styles */
 * {
   margin: 0;
   padding: 0;
@@ -67,7 +68,7 @@ section h2 {
 .sharing-config div {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 5px;
 }
 
 .sharing-config label {
@@ -76,6 +77,11 @@ section h2 {
   gap: 15px;
   font-size: 1rem;
   color: #dcdcdc;
+}
+
+.sharing-option:has(input[type=radio]:checked) {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: #007bff;
 }
 
 .sharing-config input[type="radio"] {
@@ -192,9 +198,10 @@ button:active {
   display: flex;
   align-items: flex-start;
   gap: 15px;
+  flex: 1;
 }
 
-.option-content img {
+.sharing-option img {
   width: 40px;
   height: 40px;
   object-fit: contain;
@@ -309,5 +316,118 @@ button:active {
 .user-list .user select:focus {
   outline: 2px solid #007bff;
 }
+/* Blocklist Section */
+.blocklist-section {
+  margin-top: 20px;
+  padding: 20px;
+  border: 1px solid #333;
+  border-radius: 10px;
+  background-color: #2a2a2a; /* Slightly lighter dark background */
+}
 
+.blocklist-section h2 {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
 
+/* Blocklist items container */
+.blocklist {
+  display: flex;
+  flex-direction: column;
+  gap: 16px; /* Space between items */
+}
+
+/* Individual Blocklist Item */
+.blocklist-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #1e1e1e; /* Slightly darker background */
+  padding: 12px 20px;
+  border-radius: 8px; /* Rounded corners */
+  border: 1px solid #333; /* Subtle border for separation */
+  transition: background-color 0.3s ease;
+}
+
+.blocklist-item:hover {
+  background-color: #272727; /* Highlight on hover */
+}
+
+/* Email text in blocklist item */
+.blocklist-item span {
+  font-size: 1rem;
+  color: #dcdcdc; /* Lighter text */
+  flex: 1;
+}
+
+/* Remove button in blocklist item */
+.remove-button {
+  padding: 6px 15px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: #007bff; /* Blue button */
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.remove-button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+.remove-button:active {
+  background-color: #003d80; /* Even darker blue when clicked */
+  transform: scale(0.95); /* Slight scaling effect */
+}
+
+/* Icons for items (Optional, if needed) */
+.blocklist-item-icon {
+  margin-right: 12px; /* Space between icon and email text */
+  color: #007bff; /* Blue color for icons */
+  font-size: 1.2rem; /* Adjust size of icon */
+}
+
+.navigation {
+  border-bottom: 2px solid gray;
+  display: flex;
+  margin-bottom: 15px;
+}
+
+.navigation [role=tab] {
+  align-items: center;
+  display: flex;
+  gap: 5px;
+  padding: 10px 15px;
+  position: relative;
+  top: 2px;
+}
+
+.navigation [role=tab].active {
+  border-bottom: 2px solid #007bff;
+  color: #007bff;
+}
+
+.navigation .tag {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 13px;
+  padding: 0 5px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .blocklist-item {
+    flex-direction: column; /* Stack content vertically on small screens */
+    align-items: flex-start;
+  }
+
+  .remove-button {
+    margin-top: 10px; /* Add spacing when stacked */
+  }
+}
